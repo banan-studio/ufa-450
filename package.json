@@ -1,0 +1,43 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"prettier": "prettier --write .",
+		"stylelint": "stylelint --fix \"./**/*.{scss,css,sass,vue}\"",
+		"eslint": "eslint --fix .",
+		"beautifier": "npm run stylelint && npm run eslint && npm run prettier",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"@taknepoidet-config/prettier": "^2.1.0",
+		"@taknepoidet-config/stylelint": "^2.1.1",
+		"@types/node": "^18.17.3",
+		"husky": "^8.0.3",
+		"lint-staged": "^14.0.1",
+		"nuxt": "^3.6.5",
+		"prettier": "^3.0.2",
+		"stylelint": "^15.10.3"
+	},
+	"dependencies": {
+		"@nuxtjs/eslint-config-typescript": "^12.0.0",
+		"@taknepoidet-config/eslint-config": "^2.1.4",
+		"eslint": "^8.47.0"
+	},
+	"lint-staged": {
+		"**/*.(scss|css|sass|vue)": [
+			"stylelint --fix"
+		],
+		"**/*.(js|ts|vue)": [
+			"eslint --fix"
+		],
+		"!**/*.*(scss|css|sass|js|ts|vue)": [
+			"prettier --write"
+		]
+	}
+}
