@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function rem($value, $base: 16) {
+	@return #{math.div($value, $base)}rem;
+}
+
+@function column($size, $gutter) {
+	@return calc((var(--container) + #{$gutter}) * #{$size} - #{$gutter});
+}

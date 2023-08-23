@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
 	ssr: true,
 	devtools: {enabled: true},
+	css: ["assets/style/index.scss"],
 	experimental: {
 		payloadExtraction: false
 	},

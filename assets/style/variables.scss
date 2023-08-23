@@ -1,0 +1,4 @@
+@use "utility";
+:root {
+  --ears: #{utility.rem(16)};
+}
