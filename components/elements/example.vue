@@ -1,0 +1,105 @@
+<script setup lang="ts">
+import type { PropType } from 'vue';
+import type { Example } from '~/stores/examples';
+import { bem } from '~/composables/bem';
+defineProps({
+	example: {
+		type: Object as PropType<Example>,
+		required: true
+	}
+});
+const { base, component } = bem('example');
+</script>
+
+<template>
+	<article :class="base()">
+		<nuxt-picture :class="component('cover')" loading="lazy" v-bind="example.cover" :alt="example.title" />
+		<p :class="component('location')">{{ example.location }}</p>
+		<h3 :class="component('title')">
+			<template v-if="example.link">
+				<nuxt-link :href="example.link" target="_blank">{{ example.title }}</nuxt-link>
+			</template>
+			<template v-else>
+				{{ example.title }}
+			</template>
+		</h3>
+	</article>
+</template>
+
+<style scoped lang="scss">
+@use 'assets/style/utility';
+@use 'assets/style/breakpoints';
+
+.example {
+	position: relative;
+	display: grid;
+	gap: #{utility.rem(8)};
+
+	& &__title {
+		color: var(--text-primary);
+		font-weight: 500;
+		font-style: normal;
+		font-size: #{utility.rem(32)};
+		line-height: 125%; /* 40px */
+		letter-spacing: #{utility.rem(-1.6)};
+
+		a {
+			text-decoration: none;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border-radius: #{utility.rem(16)} #{utility.rem(16)} 0 0;
+			}
+
+			@include utility.has-hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& &__location {
+		color: var(--text-primary);
+		font-weight: 500;
+		font-style: normal;
+		font-size: #{utility.rem(18)};
+		line-height: 145%; /* 26.1px */
+		letter-spacing: #{utility.rem(-0.9)};
+	}
+
+	& &__cover {
+		:deep(img) {
+			width: 100%;
+			height: auto;
+			margin-bottom: #{utility.rem(8)};
+			border-radius: #{utility.rem(16)};
+		}
+	}
+
+	@include breakpoints.media-down('xl') {
+		& &__cover {
+			:deep(img) {
+				border-radius: #{utility.rem(12)};
+			}
+		}
+
+		& &__title {
+			color: var(--text-primary);
+			font-weight: 500;
+			font-style: normal;
+			font-size: #{utility.rem(18)};
+			line-height: 145%; /* 26.1px */
+			letter-spacing: #{utility.rem(-0.9)};
+		}
+
+		& &__location {
+			font-weight: 500;
+			font-style: normal;
+			font-size: #{utility.rem(16)};
+			line-height: 145%;
+			letter-spacing: #{utility.rem(-0.8)};
+		}
+	}
+}
+</style>

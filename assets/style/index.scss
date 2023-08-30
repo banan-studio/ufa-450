@@ -1,6 +1,34 @@
-@import "reset";
-@import "variables";
+@use 'focus-visible';
+@use 'breakpoints';
+@import 'reset';
+@import 'variables';
+
+html,
+body {
+	height: max(100%, 100vh);
+	min-height: 100%;
+
+	@include breakpoints.media-down('xl') {
+		font-size: clamp(16px, min(5vw, 3vh), 40px) !important;
+	}
+}
 
 body {
-  font-family: 'Inter', sans-serif;
+	overflow-x: hidden;
+	padding: 0 var(--ears);
+	font-family: Inter, sans-serif;
+}
+
+a {
+	color: currentcolor;
+}
+
+:focus-visible,
+:focus {
+	@include focus-visible.setup;
+}
+
+/* Remove the focus outline */
+:focus:not(:focus-visible) {
+	outline: none;
 }

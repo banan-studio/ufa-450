@@ -1,4 +1,51 @@
-@use "utility";
+@use 'utility';
+@use 'breakpoints';
+
 :root {
-  --ears: #{utility.rem(16)};
+	// Цвета
+	--write: #fff;
+	--red: #e74b43;
+	--coral: #eb5757;
+	--sky: #1fb2df;
+	--blue: #0d87ff;
+	--orange: #ea692b;
+	--yellow: #fbc454;
+	--mint: #4db178;
+	--green: #0cc97b;
+	--dark-lilac: #b35197;
+	--lilac: #e42b84;
+
+	// padding
+	--padding-xxs: #{utility.rem(4)};
+	--padding-xs: #{utility.rem(6)};
+	--padding-sm: #{utility.rem(8)};
+	--padding-md: #{utility.rem(16)};
+	--padding-lg: #{utility.rem(24)};
+
+	// Текст
+	--text-primary: #1d2939;
+
+	// Контейнер
+	--container: 100%;
+	--ears: var(--padding-md);
+	--focus-visible: var(--blue);
+
+	@each $name, $breakpoint in breakpoints.$list {
+		@include breakpoints.media-up($name) {
+			--container: calc(#{$breakpoint} - var(--ears) * 2);
+		}
+	}
+
+	@include utility.has-p3 {
+		--red: oklch(63.05% 0.27 27.11deg);
+		--coral: oklch(65.34% 0.29 23.68deg);
+		--sky: oklch(71.21% 0.17 225.36deg);
+		--blue: oklch(63.08% 0.21 254.8203deg);
+		--orange: oklch(67% 0.21 43.15deg);
+		--yellow: oklch(84.95% 0.19 82.37deg);
+		--mint: oklch(68.57% 0.23 155.78deg);
+		--green: oklch(73.62% 0.23 156.76deg);
+		--dark-lilac: oklch(58.13% 0.28 339.74deg);
+		--lilac: oklch(61.35% 0.28 357.84deg);
+	}
 }
