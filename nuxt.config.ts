@@ -33,6 +33,12 @@ export default defineNuxtConfig({
 	yandexMetrika: {
 		id: process.env.VITE_YANDEX_METRICA,
 		delay: 3000,
-		verification: process.env.VITE_YANDEX_VERIFICATION
+		verification: process.env.VITE_YANDEX_VERIFICATION,
+		options: {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true
+		}
 	}
 });
