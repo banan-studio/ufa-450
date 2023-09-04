@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/apps';
-import TheSection from '~/components/core/the-section';
+import TheSection from '~/components/core/the-section.vue';
 
-const { $yandexMetrika } = useNuxtApp();
+const { reachGoal } = useYandexMetrika();
 const appStore = useAppStore();
-
-function reachGoal(title: string) {
-	$yandexMetrika?.reachGoal(title, {});
-}
 </script>
 
 <template>
@@ -20,12 +16,12 @@ function reachGoal(title: string) {
 			</p>
 			<ul class="section-hero-content__download">
 				<li>
-					<nuxt-link :href="appStore.logo.link" target="_blank" @click="reachGoal(appStore.logo.key)"
+					<nuxt-link :href="appStore.logo.link" target="_blank" @click="reachGoal(appStore.logo.key, {})"
 						>Скачать логотип
 					</nuxt-link>
 				</li>
 				<li>
-					<nuxt-link :href="appStore.style.link" target="_blank" @click="reachGoal(appStore.style.key)">
+					<nuxt-link :href="appStore.style.link" target="_blank" @click="reachGoal(appStore.style.key, {})">
 						Фирменный стиль
 					</nuxt-link>
 				</li>

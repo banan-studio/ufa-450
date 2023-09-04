@@ -1,11 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	ssr: true,
 	devtools: { enabled: true },
 	css: ['assets/style/index.scss'],
-	experimental: {
-		payloadExtraction: false
-	},
 	modules: [
 		'@pinia/nuxt',
 		'@vueuse/nuxt',
@@ -13,14 +9,14 @@ export default defineNuxtConfig({
 		'@nuxtjs/google-fonts',
 		'@nuxt/image',
 		'nuxt-gtag',
-		'nuxt-simple-robots'
+		'nuxt-simple-robots',
+		'nuxt-yandex-metrika'
 	],
 	googleFonts: {
 		families: {
 			Inter: [500, 600]
 		}
 	},
-	plugins: [{ src: '~/plugins/yandexMetrika/index.ts', mode: 'client' }],
 	sitemap: {
 		siteUrl: process.env.VITE_SITE
 	},
@@ -33,5 +29,10 @@ export default defineNuxtConfig({
 	},
 	gtag: {
 		id: process.env.VITE_GTAG
+	},
+	yandexMetrika: {
+		id: process.env.VITE_YANDEX_METRICA,
+		delay: 3000,
+		verification: process.env.VITE_YANDEX_VERIFICATION
 	}
 });

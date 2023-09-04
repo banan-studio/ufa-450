@@ -8,7 +8,7 @@ const host = useHost();
 		<Link rel="icon" :href="`${host}/icon.svg`" type="image/svg+xml`" />
 		<Link rel="apple-touch-icon" :href="`${host}/apple-touch-icon.png`" />
 		<Meta name="viewport" content="width=device-width, initial-scale=1" />
-		<Meta name="yandex-verification" content="8d4136322772ffd" />
 	</Html>
+	<YandexVerification />
 	<nuxt-layout />
 </template>

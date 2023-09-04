@@ -6,11 +6,7 @@ const appStore = useAppStore();
 const links = computed(() => {
 	return [appStore.logo, appStore.style];
 });
-const { $yandexMetrika } = useNuxtApp();
-
-function reachGoal(title: string) {
-	$yandexMetrika?.reachGoal(title, {});
-}
+const { reachGoal } = useYandexMetrika();
 
 function up() {
 	window.scrollTo({
@@ -80,7 +76,7 @@ function up() {
 		<nav class="footer-navigation">
 			<ul>
 				<li v-for="item in links" :key="item.key">
-					<nuxt-link :href="item.link" target="_blank" @click="reachGoal(item.key)">
+					<nuxt-link :href="item.link" target="_blank" @click="reachGoal(item.key, {})">
 						{{ item.title }}
 						<span v-if="item.badge">{{ item.badge }}</span>
 					</nuxt-link>

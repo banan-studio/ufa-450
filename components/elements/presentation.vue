@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { useAppStore } from '~/stores/apps';
 
-const { $yandexMetrika } = useNuxtApp();
+const { reachGoal } = useYandexMetrika();
 const appStore = useAppStore();
-
-function reachGoal(title: string) {
-	$yandexMetrika?.reachGoal(title, {});
-}
 </script>
 
 <template>
-	<nuxt-link class="presentation" :href="appStore.style.link" target="_blank" @click="reachGoal(appStore.style.key)">
+	<nuxt-link
+		class="presentation"
+		:href="appStore.style.link"
+		target="_blank"
+		@click="reachGoal(appStore.style.key, {})"
+	>
 		<div>Презентация<span>PDF</span></div>
 		<div>фирменного стиля</div>
 	</nuxt-link>
