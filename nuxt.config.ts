@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	experimental: {
 		payloadExtraction: false
 	},
-	modules: ['@pinia/nuxt', '@vueuse/nuxt', 'nuxt-simple-sitemap', '@nuxtjs/google-fonts', '@nuxt/image', 'nuxt-gtag'],
+	modules: ['@pinia/nuxt', '@vueuse/nuxt', 'nuxt-simple-sitemap', '@nuxtjs/google-fonts', '@nuxt/image', 'nuxt-gtag', 'nuxt-simple-robots'],
 	googleFonts: {
 		families: {
 			Inter: [500, 600]
