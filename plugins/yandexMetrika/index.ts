@@ -1,11 +1,8 @@
 // @ts-nocheck
-import { type InjectionKey } from 'vue';
 import { YandexMetrika } from './YandexMetrika';
 import { defineNuxtPlugin, useRouter } from '#imports';
 
-const key: InjectionKey<YandexMetrika> = Symbol('yandex-metrika');
-
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
 	if (!process.client) {
 		return {
 			provide: { yandexMetrika: undefined }
