@@ -35,10 +35,10 @@ export default defineNuxtConfig({
 		delay: 3000,
 		verification: process.env.VITE_YANDEX_VERIFICATION,
 		options: {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true,
-			webvisor:true
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
 		}
 	}
 });
