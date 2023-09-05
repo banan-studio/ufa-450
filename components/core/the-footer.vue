@@ -101,6 +101,10 @@ function up() {
 			</svg>
 		</button>
 	</footer>
+	<div class="disclaimer">
+		Данный сайт представляет собой конкурсную работу из портфолио студии
+		<nuxt-link target="_blank" href="https://banan.studio/">«Банан»</nuxt-link> 🍌
+	</div>
 </template>
 
 <style scoped lang="scss">
@@ -264,6 +268,40 @@ function up() {
 				@include utility.sr-only;
 			}
 		}
+	}
+}
+
+.disclaimer {
+	margin: 0 calc(var(--ears) * -1);
+	margin-top: var(--ears);
+	padding: calc(var(--ears) * 2) var(--ears);
+	background-color: #1d2939;
+	color: var(--yellow);
+	font-weight: 500;
+	font-style: normal;
+	font-size: #{utility.rem(32)};
+	line-height: 115%; /* 36.8px */
+	letter-spacing: #{utility.rem(-1.6)};
+	text-align: center;
+	text-wrap: balance;
+
+	a {
+		text-decoration: none;
+
+		@include utility.has-hover {
+			text-decoration: underline;
+		}
+	}
+
+	@include breakpoints.media-down('xl') {
+		font-size: #{utility.rem(20)};
+		letter-spacing: #{utility.rem(-1)};
+	}
+
+	@include breakpoints.media-down('md') {
+		padding: var(--ears);
+		font-size: #{utility.rem(16)};
+		line-height: 150%;
 	}
 }
 </style>
