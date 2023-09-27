@@ -18,7 +18,7 @@ export const useAppStore = defineStore('app', function () {
 		key: 'style',
 		title: 'Фирменный стиль',
 		badge: 'PDF',
-		link: 'https://disk.yandex.ru/d/a1AToetMADAx0g'
+		link: 'https://disk.yandex.ru/d/3VQ2L52CU9dGkA'
 	}));
 
 	return { logo, style };
