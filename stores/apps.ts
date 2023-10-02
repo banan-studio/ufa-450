@@ -17,8 +17,8 @@ export const useAppStore = defineStore('app', function () {
 	const style = computed<Link>(() => ({
 		key: 'style',
 		title: 'Фирменный стиль',
-		badge: 'PDF',
-		link: 'https://disk.yandex.ru/d/3VQ2L52CU9dGkA'
+		// badge: 'PDF',
+		link: 'https://disk.yandex.ru/d/tP-kwecMco_YMQ'
 	}));
 
 	return { logo, style };
