@@ -43,6 +43,16 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
+				title: 'Форум «Россия — исламский мир»',
+				location: 'Казань',
+				link: 'https://www.bashinform.ru/news/economy/2023-05-18/v-kazani-na-forume-rossiya-islamskiy-mir-prezentovali-investitsionnye-vozmozhnosti-bashkortostana-3263854',
+				cover: {
+					src: '/images/live/YAR03792.JPG',
+					width: 1500,
+					height: 1002
+				}
+			},
+			{
 				title: 'Оформление фасада',
 
 				location: 'Улицы Уфы',
@@ -64,7 +74,6 @@ export const useExamplesStore = defineStore('examples', () => {
 			},
 			{
 				title: 'Оформление фасада',
-
 				location: 'Улицы Уфы',
 				cover: {
 					src: '/images/live/doner.png',
