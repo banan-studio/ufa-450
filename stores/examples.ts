@@ -12,14 +12,25 @@ export const useExamplesStore = defineStore('examples', () => {
 	const items = computed<Example[]>(() => {
 		return [
 			{
-				title: 'День города Уфы в парке Кашкадан',
-				location: 'Октябрьский район. Озеро Кашкадан',
+				title: 'О новом граффити сообщил глава Орджоникидзевского района Альберт Маликов',
+				location: 'Орджоникидзевский райнон, г. Уфа',
 				cover: {
-					src: '/images/live/balloon.png',
-					width: 619,
-					height: 500
+					src: '/images/live/graffiti.jpg',
+					width: 1280,
+					height: 853
 				},
-				link: 'https://vk.com/video4532602_456239034'
+
+				link: 'https://t.me/c/1392467709/77369'
+			},
+			{
+				title: 'Форум «Россия — исламский мир»',
+				location: 'Казань',
+				link: 'https://www.bashinform.ru/news/economy/2023-05-18/v-kazani-na-forume-rossiya-islamskiy-mir-prezentovali-investitsionnye-vozmozhnosti-bashkortostana-3263854',
+				cover: {
+					src: '/images/live/YAR03792.JPG',
+					width: 1500,
+					height: 1002
+				}
 			},
 			{
 				title: 'Дизайн городских объектов для Уфы',
@@ -33,6 +44,16 @@ export const useExamplesStore = defineStore('examples', () => {
 				link: 'https://www.artlebedev.ru/ufa/urban-objects/'
 			},
 			{
+				title: 'День города Уфы в парке Кашкадан',
+				location: 'Октябрьский район. Озеро Кашкадан',
+				cover: {
+					src: '/images/live/balloon.png',
+					width: 619,
+					height: 500
+				},
+				link: 'https://vk.com/video4532602_456239034'
+			},
+			{
 				title: 'Парк Семейный',
 				location: 'Набережная р. Белая',
 				cover: {
@@ -40,16 +61,6 @@ export const useExamplesStore = defineStore('examples', () => {
 					// src: '/images/live/doner.png',
 					width: 619,
 					height: 600
-				}
-			},
-			{
-				title: 'Форум «Россия — исламский мир»',
-				location: 'Казань',
-				link: 'https://www.bashinform.ru/news/economy/2023-05-18/v-kazani-na-forume-rossiya-islamskiy-mir-prezentovali-investitsionnye-vozmozhnosti-bashkortostana-3263854',
-				cover: {
-					src: '/images/live/YAR03792.JPG',
-					width: 1500,
-					height: 1002
 				}
 			},
 			{
