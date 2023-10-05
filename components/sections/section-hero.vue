@@ -16,13 +16,20 @@ const appStore = useAppStore();
 			</p>
 			<ul class="section-hero-content__download">
 				<li>
-					<nuxt-link :href="appStore.logo.link" target="_blank" @click="reachGoal(appStore.logo.key, {})"
-						>Скачать логотип
+					<nuxt-link :href="appStore.logo.link" target="_blank" @click="reachGoal(appStore.logo.key, {})">
+						<svg viewBox="0 0 58 58">
+							<use xlink:href="/images/round.svg#logo" />
+						</svg>
+
+						<span>Скачать логотип</span>
 					</nuxt-link>
 				</li>
 				<li>
 					<nuxt-link :href="appStore.style.link" target="_blank" @click="reachGoal(appStore.style.key, {})">
-						Фирменный стиль
+						<svg viewBox="0 0 58 58">
+							<use xlink:href="/images/round.svg#pattern" />
+						</svg>
+						<span>Фирменный стиль</span>
 					</nuxt-link>
 				</li>
 			</ul>
@@ -281,11 +288,12 @@ const appStore = useAppStore();
 		li {
 			a {
 				display: inline-flex;
+				gap: #{utility.rem(16)};
 				justify-content: center;
 				align-items: center;
 				height: #{utility.rem(74)};
-				padding: #{utility.rem(23)} #{utility.rem(31)};
-				border: 1px solid #fff;
+				padding: #{utility.rem(8)} #{utility.rem(32)} #{utility.rem(8)} #{utility.rem(8)};
+				border: 1px solid rgb(255 255 255 / 16%);
 				border-radius: #{utility.rem(74)};
 				background: rgb(29 41 57 / 16%);
 				color: #fff;
@@ -302,11 +310,23 @@ const appStore = useAppStore();
 				@include utility.has-hover {
 					box-shadow: 0 #{utility.rem(16)} #{utility.rem(24)} 0 rgb(77 177 120 / 12%);
 				}
+
+				svg {
+					display: block;
+					width: #{utility.rem(58)};
+					height: #{utility.rem(58)};
+					border-radius: 50%;
+					background-color: #263141;
+				}
 			}
 
 			&:first-child a {
 				background-color: #fff;
 				color: #1d2939;
+
+				svg {
+					background-color: #edeef0;
+				}
 			}
 		}
 	}
@@ -329,8 +349,18 @@ const appStore = useAppStore();
 			li {
 				a {
 					display: flex;
+					justify-content: space-between;
 					height: #{utility.rem(62)};
-					padding: #{utility.rem(17)} #{utility.rem(31)};
+
+					span {
+						flex: 1;
+						text-align: center;
+					}
+
+					svg {
+						width: #{utility.rem(46)};
+						height: #{utility.rem(46)};
+					}
 				}
 			}
 		}
