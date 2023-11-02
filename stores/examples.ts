@@ -68,6 +68,16 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
+				title: 'Оформление фасада',
+				location: 'Улицы Уфы',
+				cover: {
+					type: 'images',
+					src: '/images/live/IMG_9718.jpg',
+					width: 900,
+					height: 720
+				}
+			},
+			{
 				title: 'Парк Семейный',
 				location: 'Набережная р. Белая',
 				cover: {
