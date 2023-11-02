@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+
 import { type Image } from '~/types';
 
 export interface Example {

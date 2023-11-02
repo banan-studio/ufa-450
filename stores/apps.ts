@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+
 import { computed } from '#imports';
 
 interface Link {

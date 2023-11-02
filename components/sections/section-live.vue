@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useExamplesStore } from '~/stores/examples';
-import Example from '~/components/elements/example';
 import TheSection from '~/components/core/the-section';
+import Example from '~/components/elements/example';
+import { useExamplesStore } from '~/stores/examples';
 
 const examplesStore = useExamplesStore();
 </script>
@@ -261,11 +261,11 @@ const examplesStore = useExamplesStore();
 			}
 		}
 
-		//@include breakpoints.media-down('xxl') {
+		// @include breakpoints.media-down('xxl') {
 		//  svg.xl {
 		//    display: block;
 		//  }
-		//}
+		// }
 	}
 }
 

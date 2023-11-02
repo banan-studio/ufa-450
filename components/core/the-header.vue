@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SrOnly from '~/components/utils/sr-only';
 import Logo from '~/components/core/logo';
+import SrOnly from '~/components/utils/sr-only';
 </script>
 
 <template>

@@ -15,16 +15,14 @@
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "latest",
-		"@nuxt/eslint-config": "^0.2.0",
 		"@nuxt/image": "1.0.0-rc.1",
 		"@nuxtjs/google-fonts": "^3.0.2",
-		"@taknepoidet-config/prettier": "^2.1.0",
-		"@taknepoidet-config/stylelint": "^2.1.1",
+		"@poidet/editorconfig": "^0.4.0",
+		"@poidet/eslint-config-nuxt": "^0.4.0",
+		"@poidet/prettier": "^0.4.0",
+		"@poidet/stylelint": "^0.4.0",
 		"@types/node": "^20.7.0",
-		"eslint": "^8.50.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-prettier": "^5.0.0",
-		"eslint-plugin-vuejs-accessibility": "^2.2.0",
+		"eslint": "^8.52.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^14.0.1",
 		"nuxt": "^3.7.4",
@@ -35,8 +33,7 @@
 		"postcss-preset-env": "^9.1.4",
 		"prettier": "^3.0.3",
 		"sass": "^1.68.0",
-		"stylelint": "^15.10.3",
-		"stylelint-config-sass-guidelines": "^10.0.0"
+		"stylelint": "^15.11.0"
 	},
 	"dependencies": {
 		"@pinia/nuxt": "^0.4.11",

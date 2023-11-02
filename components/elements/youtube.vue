@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import SrOnly from '~/components/utils/sr-only';
+
 import { useSignal } from '#imports';
+import SrOnly from '~/components/utils/sr-only';
 
 defineProps({
 	cover: {
@@ -72,7 +73,7 @@ const [active, setActive] = useSignal(false);
 			width: 100%;
 			height: auto;
 
-			//border-radius: #{utility.rem(16)};
+			// border-radius: #{utility.rem(16)};
 		}
 	}
 
@@ -139,7 +140,7 @@ const [active, setActive] = useSignal(false);
 			background: #1d2939;
 			box-shadow: 0 #{utility.rem(24)} #{utility.rem(64)} 0 rgb(29 41 57 / 32%);
 
-			//border-color: #1D2939;
+			// border-color: #1D2939;
 		}
 	}
 }

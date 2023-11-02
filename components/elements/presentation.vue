@@ -27,8 +27,7 @@ const appStore = useAppStore();
 	display: grid;
 	flex-shrink: 0;
 	gap: #{utility.rem(10)};
-	align-content: center;
-	justify-content: center;
+	place-content: center center;
 	align-items: center;
 	height: 100%;
 	padding: #{utility.rem(24)} #{utility.rem(32)};
@@ -67,8 +66,7 @@ const appStore = useAppStore();
 	> div {
 		display: flex;
 		gap: #{utility.rem(10)};
-		align-content: center;
-		justify-content: center;
+		place-content: center center;
 		align-items: center;
 	}
 

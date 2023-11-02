@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import type { Example } from '~/stores/examples';
+
 import { bem } from '~/composables/bem';
+import type { Example } from '~/stores/examples';
+
 defineProps({
 	example: {
 		type: Object as PropType<Example>,

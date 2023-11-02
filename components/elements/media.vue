@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
+
+import Youtube from '~/components/elements/youtube';
+import { bem } from '~/composables/bem';
 import type { Media } from '~/stores/medias';
 import { MediaType } from '~/stores/medias';
-import { bem } from '~/composables/bem';
-import Youtube from '~/components/elements/youtube';
 
 defineProps({
 	media: {

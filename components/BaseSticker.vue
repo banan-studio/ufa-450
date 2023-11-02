@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SrOnly from '~/components/utils/sr-only';
+
 const now = useNow();
 const { reachGoal } = useYandexMetrika();
 
@@ -27,7 +28,6 @@ function onClick() {
 
 <template>
 	<teleport to="body">
-		<sr-only>Стикеры 450 лет Уфе</sr-only>
 		<transition name="fade">
 			<nuxt-link
 				v-show="show"
@@ -37,6 +37,7 @@ function onClick() {
 				@click="onClick"
 			>
 				<img loading="lazy" :alt="image.title" :height="128" :width="128" :src="`/images/stickers/${image.key}.png`" />
+				<sr-only>Стикеры 450 лет Уфе</sr-only>
 			</nuxt-link>
 		</transition>
 	</teleport>

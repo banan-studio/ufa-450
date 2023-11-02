@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import TheHeader from '~/components/core/the-header';
 import TheFooter from '~/components/core/the-footer';
+import TheHeader from '~/components/core/the-header';
 </script>
 
 <template>
-	<the-header />
-	<nuxt-page />
-	<the-footer />
-	<client-only>
-		<base-sticker />
-	</client-only>
+	<div class="layout">
+		<the-header />
+		<nuxt-page />
+		<the-footer />
+		<client-only>
+			<base-sticker />
+		</client-only>
+	</div>
 </template>

@@ -1,4 +1,5 @@
 import { type Ref } from 'vue';
+
 import { readonly, ref, useIntersectionObserver, watch } from '#imports';
 
 interface Params {

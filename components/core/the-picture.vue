@@ -30,14 +30,15 @@
 </template>
 
 <script lang="ts" setup>
+import { templateRef } from '@vueuse/core';
 import type { PropType, Ref } from 'vue';
 import { onMounted, readonly } from 'vue';
-import { templateRef } from '@vueuse/core';
-import { useVisible } from '~/composables/useVisible';
-import { useSignal } from '~/composables/useSignal';
-import { useNuxtImage } from '~/composables/useNuxtImage';
-import { bem } from '~/composables/bem';
+
 import { computed, nextTick, ref, watch } from '#imports';
+import { bem } from '~/composables/bem';
+import { useNuxtImage } from '~/composables/useNuxtImage';
+import { useSignal } from '~/composables/useSignal';
+import { useVisible } from '~/composables/useVisible';
 
 const props = defineProps({
 	src: {

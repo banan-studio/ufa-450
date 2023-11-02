@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useMediasStore } from '~/stores/medias';
-import Presentation from '~/components/elements/presentation';
-import Media from '~/components/elements/media';
-import Competition from '~/components/elements/competition';
 import TheSection from '~/components/core/the-section';
+import Competition from '~/components/elements/competition';
+import Media from '~/components/elements/media';
+import Presentation from '~/components/elements/presentation';
+import { useMediasStore } from '~/stores/medias';
 
 const mediasStore = useMediasStore();
 </script>
@@ -401,29 +401,27 @@ const mediasStore = useMediasStore();
 				utility.rem(16)
 			)};
 
-		//grid-template-rows: #{utility.rem(378)}  #{utility.rem(310)} auto;
+		// grid-template-rows: #{utility.rem(378)}  #{utility.rem(310)} auto;
 
 		gap: #{utility.rem(16)};
 
 		> div {
 			&:first-child {
-				grid-row-start: 1;
-				grid-row-end: 3;
+				grid-row: 1 / 3;
 
-				//height: #{utility.rem(432)};
+				// height: #{utility.rem(432)};
 			}
 
 			&:nth-child(2) {
-				//height: #{utility.rem(378)};
+				// height: #{utility.rem(378)};
 			}
 
 			&:nth-child(3) {
-				//height: #{utility.rem(162)};
+				// height: #{utility.rem(162)};
 			}
 
 			&:nth-child(4) {
-				grid-column-start: 1;
-				grid-column-end: 3;
+				grid-column: 1 / 3;
 			}
 		}
 	}

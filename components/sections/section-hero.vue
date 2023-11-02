@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useAppStore } from '~/stores/apps';
 import TheSection from '~/components/core/the-section.vue';
+import { useAppStore } from '~/stores/apps';
 
 const { reachGoal } = useYandexMetrika();
 const appStore = useAppStore();
@@ -235,11 +235,11 @@ const appStore = useAppStore();
 			}
 		}
 
-		//@include breakpoints.media-down('xxl') {
+		// @include breakpoints.media-down('xxl') {
 		//  svg.xl {
 		//    display: block;
 		//  }
-		//}
+		// }
 	}
 
 	@include breakpoints.media-down('xxl') {
