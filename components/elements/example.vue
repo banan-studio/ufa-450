@@ -9,11 +9,36 @@ defineProps({
 	}
 });
 const { base, component } = bem('example');
+
+const $video = templateRef<HTMLVideoElement>('$video');
+const { stop } = useIntersectionObserver($video, ([entry]) => {
+	if (entry.isIntersecting && $video.value.dataset.src) {
+		$video.value.src = $video.value.dataset.src;
+		$video.value.load();
+		stop();
+	}
+});
 </script>
 
 <template>
 	<article :class="base()">
-		<nuxt-picture :class="component('cover')" loading="lazy" v-bind="example.cover" :alt="example.title" />
+		<div :class="component('cover')">
+			<nuxt-picture v-if="example.cover.type === 'images'" loading="lazy" v-bind="example.cover" :alt="example.title" />
+
+			<video
+				v-if="example.cover.type === 'video'"
+				ref="$video"
+				autoplay
+				loop
+				playsinline
+				muted
+				:class="component('cover')"
+				:data-src="example.cover.src"
+				:width="example.cover.width"
+				:height="example.cover.height"
+				preload="none"
+			/>
+		</div>
 		<p :class="component('location')">{{ example.location }}</p>
 		<h3 :class="component('title')">
 			<template v-if="example.link">
@@ -69,7 +94,8 @@ const { base, component } = bem('example');
 	}
 
 	& &__cover {
-		:deep(img) {
+		:deep(img),
+		video {
 			width: 100%;
 			height: auto;
 			margin-bottom: #{utility.rem(8)};
