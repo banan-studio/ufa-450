@@ -7,5 +7,7 @@ import TheFooter from '~/components/core/the-footer';
 	<the-header />
 	<nuxt-page />
 	<the-footer />
-	<base-sticker />
+	<client-only>
+		<base-sticker />
+	</client-only>
 </template>
