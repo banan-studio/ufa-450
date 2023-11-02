@@ -78,6 +78,16 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
+				title: 'Республиканский конкурс детского рисунка',
+				location: 'Интернет',
+				cover: {
+					type: 'images',
+					src: '/images/live/picture-competition.jpg',
+					width: 1527,
+					height: 2160
+				}
+			},
+			{
 				title: 'Парк Семейный',
 				location: 'Набережная р. Белая',
 				cover: {
