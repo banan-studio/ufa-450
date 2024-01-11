@@ -79,13 +79,13 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
-				title: 'Республиканский конкурс детского рисунка',
-				location: 'Интернет',
+				title: 'Оформление фасада',
+				location: 'Улицы Уфы',
 				cover: {
 					type: 'images',
-					src: '/images/live/picture-competition.jpg',
-					width: 1527,
-					height: 2160
+					src: '/images/live/IMG_0739.jpg',
+					width: 400,
+					height: 300
 				}
 			},
 			{
@@ -101,6 +101,16 @@ export const useExamplesStore = defineStore('examples', () => {
 			},
 			{
 				title: 'Оформление фасада',
+				location: 'Улицы Уфы',
+				cover: {
+					type: 'images',
+					src: '/images/live/IMG_0461.jpg',
+					width: 400,
+					height: 300
+				}
+			},
+			{
+				title: 'Оформление фасада',
 
 				location: 'Улицы Уфы',
 				cover: {
@@ -111,8 +121,17 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
+				title: 'Республиканский конкурс детского рисунка',
+				location: 'Интернет',
+				cover: {
+					type: 'images',
+					src: '/images/live/picture-competition.jpg',
+					width: 1527,
+					height: 2160
+				}
+			},
+			{
 				title: 'Оформление фасада',
-
 				location: 'Улицы Уфы',
 				cover: {
 					type: 'images',
