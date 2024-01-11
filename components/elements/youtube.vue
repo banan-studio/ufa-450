@@ -2,6 +2,7 @@
 import type { PropType } from 'vue';
 
 import { useSignal } from '#imports';
+import BasePicture from '~/components/elements/BasePicture';
 import SrOnly from '~/components/utils/sr-only';
 
 defineProps({
@@ -25,7 +26,7 @@ const [active, setActive] = useSignal(false);
 <template>
 	<div class="youtube">
 		<template v-if="!active">
-			<nuxt-picture v-bind="cover" :alt="title" loading="lazy" class="youtube__cover" />
+			<base-picture v-bind="cover" :alt="title" loading="lazy" class="youtube__cover" />
 			<a target="_blank" :href="`https://youtu.be/${id}`" @click.prevent.stop="setActive(true)">
 				<sr-only> {{ title }}</sr-only>
 			</a>

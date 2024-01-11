@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
+import BasePicture from '~/components/elements/BasePicture';
 import Youtube from '~/components/elements/youtube';
 import { bem } from '~/composables/bem';
 import type { Media } from '~/stores/medias';
@@ -19,7 +20,7 @@ const { base } = bem('media');
 <template>
 	<div :class="base()">
 		<youtube v-if="media.type === MediaType.YouTube" v-bind="media" />
-		<nuxt-picture v-if="media.type === MediaType.Photo" loading="lazy" :alt="media.title" v-bind="media.cover" />
+		<base-picture v-if="media.type === MediaType.Photo" loading="lazy" :alt="media.title" v-bind="media.cover" />
 	</div>
 </template>
 

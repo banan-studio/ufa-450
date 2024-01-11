@@ -17,6 +17,9 @@ dependencies:
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.3)(vue@3.4.9)
+  unlazy:
+    specifier: ^0.10.4
+    version: 0.10.4
 
 devDependencies:
   '@nuxt/devtools':
@@ -3341,6 +3344,10 @@ packages:
       hookable: 5.5.3
       unhead: 1.8.9
       vue: 3.4.9(typescript@5.3.3)
+
+  /@unlazy/core@0.10.4:
+    resolution: {integrity: sha512-lwPOLzaLVwbrqnQQk3WABW6oPK8MeiDWCixpvV3qTlyQx7i7Rs08OmPGzTgrR6lapGWcims63ZAf6GGbwdsMng==}
+    dev: false
 
   /@unocss/astro@0.58.3(vite@4.5.0):
     resolution: {integrity: sha512-qJL+XkWYJhEIX4AmOtbfb2Zu4holTDpRscfvVci4T+2VWjyE3mgtsyNzi9ZChe/hdEPRa7g26gSpNQeMhjh/Kw==}
@@ -10429,6 +10436,12 @@ packages:
   /universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
+
+  /unlazy@0.10.4:
+    resolution: {integrity: sha512-Z0KmPcsiOElDAr81S6Xcpf8TgFH66LK7LIDd/PTZlrp3V50kJSJzCR6Od14LwGwY5bGK9e03SaO6Bc3yI+DDxg==}
+    dependencies:
+      '@unlazy/core': 0.10.4
+    dev: false
 
   /unocss@0.58.3(@unocss/webpack@0.58.3)(postcss@8.4.33)(vite@4.5.0):
     resolution: {integrity: sha512-2rnvghfiIDRQ2cOrmN4P7J7xV2p3yBK+bPAt1aoUxCXcszkLczAnQzh9c7IZ+p70kSVstK45cJTYV6TMzOLF7Q==}

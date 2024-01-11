@@ -19,7 +19,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/graffiti.jpg',
 					width: 1280,
-					height: 853
+					height: 853,
+					thumbhash: 'UBgKFYJeh3m/WneqVbdpmPJTBxpo'
 				},
 
 				link: 'https://t.me/c/1392467709/77369'
@@ -32,7 +33,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/YAR03792.JPG',
 					width: 1500,
-					height: 1002
+					height: 1002,
+					thumbhash: 'k+cJFYRZh5l/mIeGd4d3icqBvwv5'
 				}
 			},
 			{
@@ -42,7 +44,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/render.png',
 					width: 618,
-					height: 364
+					height: 364,
+					thumbhash: 'EQiOE4IPKWWEeHAniIByCIeHj4hw9wc'
 				},
 
 				link: 'https://www.artlebedev.ru/ufa/urban-objects/'
@@ -54,7 +57,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/balloon.png',
 					width: 619,
-					height: 500
+					height: 500,
+					thumbhash: 'UeeFDIIPIW2Yt4wImo83ql1wePiHCHePAA'
 				},
 				link: 'https://vk.com/video4532602_456239034'
 			},
@@ -75,7 +79,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/IMG_9718.jpg',
 					width: 900,
-					height: 720
+					height: 720,
+					thumbhash: 'XBgGHoQ9mZZfeoiEiHd3iIaGv2b2moY'
 				}
 			},
 			{
@@ -85,7 +90,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/IMG_0739.jpg',
 					width: 400,
-					height: 300
+					height: 300,
+					thumbhash: 'YOcRDYKJl4iUZ3ifd4d4iJiGgHgI'
 				}
 			},
 			{
@@ -96,7 +102,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					src: '/images/live/family-park.png',
 					// src: '/images/live/doner.png',
 					width: 619,
-					height: 600
+					height: 600,
+					thumbhash: 'GRiKDYIPeUWNeGBHVp+a6PlXh4d/eHD3Bw'
 				}
 			},
 			{
@@ -106,7 +113,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/IMG_0461.jpg',
 					width: 400,
-					height: 300
+					height: 300,
+					thumbhash: '5fcFDYB3iYmQiIhqiWeXZoy/u/hq'
 				}
 			},
 			{
@@ -117,7 +125,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/bakery.png',
 					width: 619,
-					height: 600
+					height: 600,
+					thumbhash: 'qBiGFYQPVWZImW85qSiPUfQ2h4d7eHC3CA'
 				}
 			},
 			{
@@ -127,7 +136,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/picture-competition.jpg',
 					width: 1527,
-					height: 2160
+					height: 2160,
+					thumbhash: 'bxgOHQRmdpiI93h4d3d4ZpB01QdW'
 				}
 			},
 			{
@@ -137,7 +147,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/kiosk.png',
 					width: 619,
-					height: 364
+					height: 364,
+					thumbhash: 'HfiFA4AP31/JcmiPk5wMZIeHjohw1wc'
 				}
 			},
 			{
@@ -147,7 +158,8 @@ export const useExamplesStore = defineStore('examples', () => {
 					type: 'images',
 					src: '/images/live/doner.png',
 					width: 619,
-					height: 500
+					height: 500,
+					thumbhash: '3feJDIIPb2ZXdndouO/2mEB5eAh4B3eAAA'
 				}
 			}
 		];

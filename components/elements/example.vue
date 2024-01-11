@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
+import BasePicture from '~/components/elements/BasePicture';
 import { bem } from '~/composables/bem';
 import type { Example } from '~/stores/examples';
 
@@ -25,7 +26,7 @@ const { stop } = useIntersectionObserver($video, ([entry]) => {
 <template>
 	<article :class="base()">
 		<div :class="component('cover')">
-			<nuxt-picture v-if="example.cover.type === 'images'" loading="lazy" v-bind="example.cover" :alt="example.title" />
+			<base-picture v-if="example.cover.type === 'images'" v-bind="example.cover" :alt="example.title" />
 
 			<video
 				v-if="example.cover.type === 'video'"
