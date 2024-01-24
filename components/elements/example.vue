@@ -42,7 +42,7 @@ const { stop } = useIntersectionObserver($video, ([entry]) => {
 				preload="none"
 			/>
 		</div>
-		<p :class="component('location')">{{ example.location }}</p>
+		<p v-if="example.location" :class="component('location')">{{ example.location }}</p>
 		<h3 :class="component('title')">
 			<template v-if="example.link">
 				<nuxt-link :href="example.link" target="_blank">{{ example.title }}</nuxt-link>

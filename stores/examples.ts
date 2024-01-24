@@ -5,7 +5,7 @@ import { type Image } from '~/types';
 export interface Example {
 	cover: Image & { type: 'images' | 'video' };
 	title: string;
-	location: string;
+	location?: string;
 	link?: string;
 }
 
@@ -84,8 +84,18 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
-				title: 'Оформление фасада',
-				location: 'Улицы Уфы',
+				title: 'Оформление кружки',
+				cover: {
+					type: 'images',
+					src: '/images/live/IMG_0830.jpg',
+					width: 1000,
+					height: 1333,
+					thumbhash: 'aRgKFQSLaJmH+GanhnVoh+ZwDG9V'
+				}
+			},
+			{
+				title: 'Цветочный ларёк',
+				location: 'улица Айская',
 				cover: {
 					type: 'images',
 					src: '/images/live/IMG_0739.jpg',
@@ -107,8 +117,8 @@ export const useExamplesStore = defineStore('examples', () => {
 				}
 			},
 			{
-				title: 'Оформление фасада',
-				location: 'Улицы Уфы',
+				title: 'Оформление центра печати',
+				location: 'Бульвар Хадии Давлетшиной',
 				cover: {
 					type: 'images',
 					src: '/images/live/IMG_0461.jpg',
