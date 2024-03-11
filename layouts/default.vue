@@ -5,11 +5,19 @@ import TheHeader from '~/components/core/the-header';
 
 <template>
 	<div class="layout">
-		<the-header />
-		<nuxt-page />
-		<the-footer />
-		<client-only>
-			<base-sticker />
-		</client-only>
+		<Body class="default-layout">
+			<the-header />
+			<nuxt-page />
+			<the-footer />
+			<client-only>
+				<base-sticker />
+			</client-only>
+		</Body>
 	</div>
 </template>
+
+<style>
+body.default-layout {
+	padding: 0 var(--ears);
+}
+</style>
