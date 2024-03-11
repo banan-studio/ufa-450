@@ -40,5 +40,11 @@ export default defineNuxtConfig({
 			accurateTrackBounce: true,
 			webvisor: true
 		}
+	},
+	robots: {
+		disallow: [
+			'/200.html',
+			'/404.html'
+		]
 	}
 });
