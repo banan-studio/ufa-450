@@ -63,6 +63,28 @@ export const useExamplesStore = defineStore('examples', () => {
 				link: 'https://vk.com/video4532602_456239034'
 			},
 			{
+				title: 'Оформление фасада',
+				location: 'Площадь Ленина',
+				cover: {
+					type: 'images',
+					src: '/images/live/1-IMG_1629.jpg',
+					width: 960,
+					height: 1280,
+					thumbhash: 'X9cJLQhzeGpl+GlmqIR4iJmgowk6'
+				}
+			},
+			{
+				title: 'Оформление фасада',
+				location: 'Театральный сквер',
+				cover: {
+					type: 'images',
+					src: '/images/live/2-IMG_1608.jpg',
+					width: 679,
+					height: 1025,
+					thumbhash: 'YdcJHQSKmH+H14kmh3gXd3eAcwc4'
+				}
+			},
+			{
 				title: 'Реклама "Театр кукол"',
 				location: 'Улицы Уфы',
 				cover: {
